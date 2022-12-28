@@ -29,15 +29,19 @@
 
       <div class="form-group">
         <label>Postal Code</label>
-        <input formControlName="postalCode" type="password" class="form-control">
+        <input formControlName="postalCode" type="text" class="form-control">
       </div>
     </div>
 
     <button class="btn btn-primary" type="submit">Register</button>
+    <button class="btn btn-secondary ml-2" (click)="setValue()">Load Data using setValue</button>
+    <button class="btn btn-secondary ml-2" (click)="patchValue()">Load Data using patchValue</button>
 
   </form>
 
-  {{ registrationForm.value | json }}
+  <!-- {{ registrationForm.value | json }}
+  <br>
+  {{ registrationForm.value.addressFields | json }} -->
 </div>
 
 <router-outlet></router-outlet>

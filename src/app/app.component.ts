@@ -17,4 +17,26 @@ export class AppComponent {
       postalCode: new FormControl('')
     })
   })
+
+  setValue() {
+    this.registrationForm.setValue({
+      userName: 'Khan',
+      password: '',
+      confirmPassword: '',
+      addressFields: {
+        city: 'Rawalpindi',
+        state: 'Rawalpindi',
+        postalCode: '46000'
+      }
+    })
+  }
+  patchValue() {
+    this.registrationForm.patchValue({
+      userName: 'Karlal',
+      addressFields: {
+        city: 'Islamabad',
+        postalCode: '44000'
+      }
+    })
+  }
 }
